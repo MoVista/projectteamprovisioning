@@ -58,7 +58,7 @@ locals {
   name   = "datateamCluster"
   region = "us-west-2"
 
-  vpc_cidr = "10.0.1.0/16"
+  vpc_cidr = "10.0.0.0/16"
   azs      = slice(data.aws_availability_zones.available.names, 0, 3)
 
   tags = {
