@@ -8,6 +8,12 @@ provider "aws" {
   alias  = "virginia"
 }
 
+provider "aws" {
+  assume_role {
+    role_arn = "arn:aws:iam::516117289716:role/eksClusterRole"
+  }
+}
+
 provider "kubernetes" {
   host                   = module.eks.cluster_endpoint
   cluster_ca_certificate = base64decode(module.eks.cluster_certificate_authority_data)
