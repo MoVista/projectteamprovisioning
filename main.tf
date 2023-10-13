@@ -55,7 +55,7 @@ data "aws_ecrpublic_authorization_token" "token" {
 data "aws_availability_zones" "available" {}
 
 locals {
-  name   = "datateamCluster01"
+  name   = "dataClustertest1"
   region = "us-west-2"
 
   vpc_cidr = "10.0.0.0/16"
