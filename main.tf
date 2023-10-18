@@ -48,14 +48,14 @@ provider "kubectl" {
   }
 }
 
-data "aws_ecrpublic_authorization_token" "token" {
+ "aws_ecrpublic_authorization_token" "token" {
   provider = aws.virginia
 }
 
-data "aws_availability_zones" "available" {}
+ "aws_availability_zones" "available" {}
 
 locals {
-  name   = "dataClustertest1"
+  name   = "dataClustertest2"
   region = "us-west-2"
 
   vpc_cidr = "10.0.0.0/16"
