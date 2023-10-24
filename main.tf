@@ -48,7 +48,7 @@ provider "kubectl" {
   }
 }
 
- resource "aws_ecrpublic_authorization_token" "token" {
+ "aws_ecrpublic_authorization_token" "token" {
   provider = aws.virginia
 }
 
