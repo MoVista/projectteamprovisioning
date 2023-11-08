@@ -48,14 +48,14 @@ provider "kubectl" {
   }
 }
 
- "aws_ecrpublic_authorization_token" "token" {
+data "aws_ecrpublic_authorization_token" "token" {
   provider = aws.virginia
 }
 
- "aws_availability_zones" "available" {}
+data "aws_availability_zones" "available" {}
 
 locals {
-  name   = "dataClustertest2"
+  name   = "projectCluster"
   region = "us-west-2"
 
   vpc_cidr = "10.0.0.0/16"
@@ -76,7 +76,7 @@ module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "~> 19.13"
 
-  cluster_name                   = local.name
+  cluster_name                   = "platformCluster"
   cluster_version                = "1.27"
   cluster_endpoint_public_access = true
 
