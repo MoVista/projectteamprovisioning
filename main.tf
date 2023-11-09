@@ -55,7 +55,7 @@ data aws_ecrpublic_authorization_token token {
 data "aws_availability_zones" "available" {}
 
 locals {
-  name   = "alphatest02"
+  name   = "alphatest03"
   region = "us-west-2"
 
   vpc_cidr = "10.0.0.0/16"
@@ -76,7 +76,7 @@ module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "~> 19.13"
 
-  cluster_name                   = "alphatest02cluster"
+  cluster_name                   = "alphatest03cluster"
   cluster_version                = "1.27"
   cluster_endpoint_public_access = true
 
