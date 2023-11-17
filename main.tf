@@ -76,7 +76,7 @@ module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "~> 19.13"
 
-  cluster_name                   = "alphatest05cluster"
+  cluster_name                   = "alphatest06cluster"
   cluster_version                = "1.27"
   cluster_endpoint_public_access = true
 
